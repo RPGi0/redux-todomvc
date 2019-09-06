@@ -9,7 +9,7 @@ export default class TodoApp extends React.Component {
   render() {
     return <div>
       <section id="todoapp">
-        <TodoList todos={this.props.todos} />
+        <TodoList todos={this.props.todos} filter={this.props.filter}/>
       </section>
     </div>
   }
