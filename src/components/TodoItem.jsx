@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TextInput from './TextInput'
+
 export default class TodoItem extends React.Component {
   render() {
     return (
@@ -10,6 +12,7 @@ export default class TodoItem extends React.Component {
             {this.props.text}
           </label>
           <button className="destroy"></button>
+          <TextInput />
         </div>
       </li>
     )
