@@ -31,7 +31,7 @@ describe('TodoTools', () => {
   });
 
   it('calls a callback when the user clicks on Clear Completed buttons', () => {
-    var cleared = false
+    let cleared = false;
     const clearCompleted = () => cleared = true;
     const component = renderIntoDocument(
       <TodoTools clearCompleted={clearCompleted} />
