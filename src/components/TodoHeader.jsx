@@ -27,7 +27,5 @@ export default class TodoHeader extends React.Component {
         />
       </header>
     )
-
-
   }
 }
