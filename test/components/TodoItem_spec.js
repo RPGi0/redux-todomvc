@@ -46,8 +46,8 @@ describe('TodoItem', () => {
     const text = 'React';
     const text2 = 'Redux';
     const component = renderIntoDocument(
-      <TodoItem text={text} isEditing={true} />,
-      <TodoItem text={text2} isEditing={false} />
+      <TodoItem text={text} isCompleted={true} />,
+      <TodoItem text={text2} isCompleted={false} />
     );
 
     const input =  scryRenderedDOMComponentsWithTag(component, 'input');
@@ -55,7 +55,7 @@ describe('TodoItem', () => {
     expect(input[1].checked).to.equal(false);
   });
 
-  it('envokes a callback when the delete button is clicked', () => {
+  it('invokes a callback when the delete button is clicked', () => {
     const text = 'React';
     let deleted = false;
     const deleteItem = () => deleted = true;
@@ -68,7 +68,7 @@ describe('TodoItem', () => {
     expect(deleted).to.equal(true);
   });
 
-  it('envokes a callback when checkbox is clicked', () => {
+  it('invokes a callback when checkbox is clicked', () => {
     const text = 'React';
     let isChecked = false;
     const toggleComplete = () => isChecked = true;
@@ -81,7 +81,7 @@ describe('TodoItem', () => {
     expect(isChecked).to.equal(true);
   });
 
-  it('envokes a callback when text is double clicked', () => {
+  it('invokes a callback when text is double clicked', () => {
     let text = 'React';
     const editItem = () => text = 'Redux';
     const component = renderIntoDocument(
