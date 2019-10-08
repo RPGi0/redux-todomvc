@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {List, Map} from 'immutable';
+import { Map } from 'immutable';
 import{ compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
